@@ -10,7 +10,7 @@
         <h1>Reseñas gastronómicas</h1>
         <h2>Introducción</h2>
     </hgroup>
-    <p> Bienvenidos a <b>GastroCrítica</b>, el lugar donde los amantes 
+    <p> Bienvenidos a <b>Apperitivo</b>, el lugar donde los amantes 
         de la buena comida encuentran las mejores recomendaciones y 
         reseñas sobre restaurantes, cafeterías y lugares gastronómicos.
         Ya seas un entusiasta de la cocina <big>local</big> o estés buscando una 
@@ -24,9 +24,108 @@
     </p>
 
     <br>
+    <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#search">Buscar Restaurantes</a></li>
+        <li><a href="#reviews">Reseñas</a></li>
+        <li><a href="#favorites">Favoritos</a></li>
+        <li><a href="#offers">Ofertas</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
    
 <img src="https://weekend-bucket.s3.amazonaws.com/Top_10_de_las_mejores_hamburguesas_en_Bucaramanga_f6b63864b2.jpg">
 <hr>
+
+    <h2>Busca tu Restaurante Ideal</h2>
+    <form action="#" method="GET">
+        <div>
+            <label for="tipo">Tipo de comida</label>
+            <select id="tipo" name="type">
+                <option value="italiana">Italiana</option>
+                <option value="mexicana">Mexicana</option>
+                <option value="japonesa">Japonesa</option>
+                <option value="vegana">Vegana</option>
+            </select>
+        </div>
+        <div>
+            <label for="ubicacion">Ubicación</label>
+            <input type="text" id="ubicacion" name="ubicacion" placeholder="Ciudad, barrio...">
+        </div>
+        <div>
+            <label for="precios">Rango de precios</label>
+            <select id="precios" name="precios">
+                <option value="barato">Barato</option>
+                <option value="medio">Medio</option>
+                <option value="caro">Caro</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit"></input>
+        </div>
+    </form>
+ <!-- Sección de listas y enlaces -->
+    <h2>Lista de Restaurantes por Categoría</h2>
+    
+    <!-- Lista Ordenada -->
+    <h3>Tipos de Comida</h3>
+    <ol>
+        <li>Italiana</li>
+        <li>Mexicana</li>
+        <li>Japonesa</li>
+        <li>Vegana</li>
+    </ol>
+
+    <h3>Restaurantes recomendados:</h3>
+    <ul>
+        <li><a href="https://warynessy.com" target="_blank">Warynessy</a></li>
+        <li><a href="https://la-isla.metro.rest/?lang=es" target="_blank">La isla</a></li>
+        <li><a href="https://www.lampadini.es/" target="_blank">L'Ampadini</a></li>
+    </ul>
+
+     <!-- Sección de tabla -->
+     
+        <h2>Tabla de Restaurantes por Categoría</h2>
+        <table border="2px">
+            <thead>
+                <tr>
+                    <th>Restaurante</th>
+                    <th>Tipo de Comida</th>
+                    <th>Precio</th>
+                    <th>Valoración</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Warynessy</td>
+                    <td>Mediterráneo</td>
+                    <td>Medio</td>
+                    <td>Buena</td>
+                </tr>
+                <tr>
+                    <td>La isla</td>
+                    <td>Tradicional</td>
+                    <td>Barato</td>
+                    <td>Poco buenas</td>
+                </tr>
+                <tr>
+                    <td>L'Ampadini</td>
+                    <td>Italiana</td>
+                    <td>Caro</td>
+                    <td>Muy buenas</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Las valoraciones están basadas en reseñas de usuarios.</td>
+                </tr>
+            </tfoot>
+        </table>
+
+<hr>
+<!-- Sección de reseñas -->
+    <h2>Reseñas y Valoraciones</h2>
+    <p>Lee lo que otros usuarios piensan según sus experiencias.</p>
+    
     <h3>Comentarios</h3>
 <pre>Lugar: Hamburguesas Manolete.
 Atención: buena/rápida.
@@ -35,9 +134,50 @@ Comentario: Muy buena hamburguesa, grande, buen sabor y acompañada por una sals
 Imagen:
 <img src="https://weekend-bucket.s3.amazonaws.com/3_4935208e43.jpg">
     </pre>
-    <sub></sub>
-    <sup></sup>
-    <!--Comentar el codigo-->
-
+<hr>
+    <!-- Sección del formulario -->
+        <h2>Formulario de Contacto</h2>
+        <p>Si tienes alguna sugerencia, por favor ponte en contacto: </p>
+        <form action="#" method="POST">
+            <div>
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required> <br><br>
+            </div>
+            <div>
+                <label for="correo">Correo Electrónico: </label>
+                <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required><br><br>
+            </div>
+            <div>
+                <label for="telefono">Teléfono: </label>
+                <input type="number" id="telefono" name="telefono" placeholder="123-456-7890"> <br><br>
+            </div>
+            <div>
+                <label for="opinion">Sugerencia: </label> <br>
+                <textarea id="opinion" name="opinion" rows="4" cols="30" placeholder="Ingresa aca tu sugerencia.."></textarea> <br><br>
+            </div>
+            <div>
+                <label for="subcribete">¿Te gustaría recibir nuestras novedades?</label>
+                <input type="checkbox" id="subcribete" name="subcribete" value="sí"> Sí <br><br>
+            </div>
+            <div>
+                <label for="preferencias">Tus Preferencias Alimenticias: </label>
+                <input type="radio" id="vegano" name="preferences" value="vegan"> Vegano
+                <input type="radio" id="vegetariano" name="preferences" value="vegetarian"> Vegetariano
+                <input type="radio" id="carniboro" name="preferences" value="carnivore"> Carnívoro <br><br>
+            </div>
+            
+            <div>
+                <label for="fechavisit">Fecha de Visita:</label>
+                <input type="date" id="fechavisit" name="date"> <br><br>
+            </div>
+            <div>
+                <label for="imagen">Sube una Imagen</label>
+                <input type="file" id="imagen" name="imagen"> <br><br>
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </div>
+        </form>
 </body>
 </html>
